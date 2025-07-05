@@ -1,0 +1,175 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #F6F0E4;
+  color: #4C3A2D;
+  line-height: 1.6;
+}
+
+/* Titoli */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #063612;
+  font-style: italic;
+}
+
+a {
+  color: #4C6B3C;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #C9A66B;
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(45deg, #8B5E3C, #4C6B3C);
+  color: #FEFBF3;
+  padding: 30px 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+.logo img {
+  height: 150px;
+}
+
+.logo h1 {
+  margin: 10px 0 5px;
+  font-size: 3.5em;
+  color: #491d04;
+}
+
+.logo p {
+  font-family:  Georgia, serif;
+   font-style: italic;
+  font-size: 1.3em;
+  color: #491d04;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #FEFBF3;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: #C9A66B;
+  color: #4C3A2D;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(120deg, rgba(139,94,60,0.8), rgba(76,107,60,0.8)), 
+              url('images/cane1.jpg') center/cover no-repeat;
+  height: 60vh;
+  color: #063612;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3em;
+}
+
+/* Section */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #FEFBF3 0%, #E8DCC3 100%);
+}
+
+.section.light {
+  background: linear-gradient(180deg, #E8DCC3 0%, #F6F0E4 100%);
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #4C3A2D;
+  font-size: 1.1em;
+}
+
+.section-image {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Attestati Section (extra) */
+.attestati {
+  background: linear-gradient(135deg, #8B5E3C, #4C6B3C);
+  color: #FEFBF3;
+}
+
+.attestati h2 {
+  color: #FEFBF3;
+}
+
+.attestati p {
+  color: #E8DCC3;
+}
+
+/* Social */
+.social {
+  margin-top: 20px;
+}
+
+.social img {
+  height: 40px;
+  margin: 10px 15px 0;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* Footer */
+footer {
+  background-color: #4C6B3C;
+  color: #FEFBF3;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}

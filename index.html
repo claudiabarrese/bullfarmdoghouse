@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bull Farm Dog House - Pensione per Cani</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Logo Bull Farm Dog House">
+      <h1>Bull Farm Dog House</h1>
+      <p>Pensione per cani</p>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#benvenuto">Chi Siamo</a></li>
+        <li><a href="#attestati">Attività e Attestati</a></li>
+        <li><a href="#dovesiamo">Dove siamo</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Un soggiorno esclusivo immerso nella natura</h2>
+    <p>Per il tuo fedele compagno a quattro zampe</p>
+  </section>
+
+  <section id="benvenuto" class="section">
+  <h2>Benvenuti alla Bull Farm Dog House!</h2>
+  <p>
+    Siamo felici di darvi il benvenuto nella nostra pensione per cani! Alla Bull Farm Dog House, storia, esperienza ed amore per gli animali si fondono per creare un ambiente elegante e familiare, dove ogni ospite a quattro zampe è accolto come un vero membro della famiglia.
+  </p>
+  <p>
+    <br>
+    Il nostro obiettivo è offrire un ambiente amorevole e sicuro, dove il vostro cane può divertirsi, socializzare e rilassarsi. I nostri spazi sono progettati per stimolare il gioco e il benessere, con aree verdi, percorsi di agility e molto spazio per esplorare.<br><br>
+    Il nostro team di amanti degli animali è sempre pronto a prendersi cura del vostro amico a quattro zampe, offrendo attenzioni personalizzate e attività divertenti come passeggiate, giochi di gruppo e momenti di coccole.<br><br>
+    Alla Bull Farm Dog House, crediamo che ogni soggiorno debba essere un'esperienza ricca di avventure e comfort. Grazie per aver scelto di far parte della nostra famiglia. Siamo impazienti di conoscere il vostro cane e garantire che il suo soggiorno sia una vera vacanza!<br><br>
+    Con affetto,<br>
+    Il Team della Bull Farm Dog House
+  </p>
+
+  <div class="carousel">
+    <div class="carousel-window">
+      <div class="carousel-images">
+        <img src="images/f1.jpg" alt="Foto 1">
+        <img src="images/f2.jpg" alt="Foto 2">
+        <img src="images/f3.jpg" alt="Foto 3">
+        <img src="images/f5.jpg" alt="Foto 5">
+      </div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <style>
+    .carousel {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .carousel-window {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .carousel-images {
+      display: flex;
+      width: calc(400px * 4);
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-images img {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 50%;
+      user-select: none;
+    }
+    .carousel .prev {
+      left: 10px;
+    }
+    .carousel .next {
+      right: 10px;
+    }
+    .carousel button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  </style>
+
+  <script>
+    (function(){
+      const carouselImages = document.querySelector("#benvenuto .carousel-images");
+      const images = document.querySelectorAll("#benvenuto .carousel-images img");
+      const prevBtn = document.querySelector("#benvenuto .prev");
+      const nextBtn = document.querySelector("#benvenuto .next");
+      let index = 0;
+      function showSlide(idx) {
+        if (idx < 0) index = images.length - 1;
+        else if (idx >= images.length) index = 0;
+        else index = idx;
+        carouselImages.style.transform = `translateX(-${index * 400}px)`;
+      }
+      prevBtn.addEventListener("click", () => showSlide(index - 1));
+      nextBtn.addEventListener("click", () => showSlide(index + 1));
+    })();
+  </script>
+</section>
+
+  <section id="attestati" class="section light">
+  <h2>Attività, Attestati e Formazione</h2>
+  <p class="attivita">
+    Pensione per cani, Allevamento Bull Terrier inglese standard.<br>
+    Addestramento, asilo e alimentazione dedicata.<br>
+  </p>
+  <p class="attivita">
+    Offriamo inoltre un servizio di videosorveglianza che consente di monitorare il tuo cane in tempo reale durante la sua permanenza, per garantirti sempre tranquillità e vicinanza.<br>
+  </p>
+  <ul class="attestati-list">
+    <li>🎓 Addestratori ENCI</li>
+    <li>🔍 Attestati di Ricerca e Protezione</li>
+    <li>🥣 Attestati di Alimentazione e Nutrizione sul cane</li>
+  </ul>
+</section>
+
+
+
+  <section id="dovesiamo" class="section">
+  <h2>Dove siamo</h2>
+  <p>C.da Via agli Agli SNC.</p>
+  <p>87050, Lappano (CS)</p>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2576.357152465813!2d16.29870287595704!3d39.31533327163786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDE4JzU1LjIiTiAxNsKwMTgnMDQuNiJF!5e1!3m2!1sit!2sit!4v1751709029537!5m2!1sit!2sit" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+      width="100%" 
+      height="350" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  </section>
+
+
+ <section id="contatti" class="section light">
+  <h2>Contatti</h2>
+  <p>
+    📞 <a href="tel:+393791002593">+39 379 100 2593</a><br>
+    📧 <a href="mailto:bullfarm.garro@gmail.com">bullfarm.garro@gmail.com</a><br>
+    <a href="https://wa.me/393428495993" target="_blank">
+      <img src="images/whats.png" alt="WhatsApp" style="width: 26px; height: 26px;">
+      +39 342 849 5993
+    </a>
+  </p>
+</section>
+
+
+<section id="orari" class="section light">
+  <h2>Orari</h2>
+  <div class="orari-box">
+    <p class="giorni">Tutti i giorni, dal Lunedì alla Domenica</p>
+    <p class="fascia-oraria">⏰ 8:30 - 20:30</p>
+  </div>
+</section>
+
+
+  <section id="Social" class="section">
+  <h2>Social</h2>
+    <div class="social">
+      <p>
+      Seguici sui nostri social e scopri il mondo Bull Farm tra cuccioli, natura e passione.
+    </p>
+      <a href="https://www.facebook.com/share/1Aqc5CXf5W/?mibextid=wwXIfr" target="_blank">
+        <img src="images/face.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/bullfarmdoghouse?igsh=OGcwbWE4OWR2NDVl" target="_blank">
+        <img src="images/insta.jpg" alt="Instagram">
+      </a>
+    </div>
+  </section>
+
+
+  <section id="recensioni" class="section light">
+  <h2>Recensioni dei Nostri Clienti</h2>
+  
+  <div class="carousel-recensioni">
+    <div class="recensioni-wrapper">
+      <div class="review">
+        <p>“Struttura meravigliosa immersa nella natura! Il mio cane è stato trattato come un principe. Personale gentilissimo e super competente.”</p>
+        <div class="stars">★★★★★</div>
+        <span class="author">- Martina R.</span>
+      </div>
+      <div class="review">
+        <p>“Finalmente una pensione dove posso lasciare il mio Bull Terrier in tutta tranquillità. Spazi ampi, puliti e servizio impeccabile.”</p>
+        <div class="stars">★★★★☆</div>
+        <span class="author">- Luca G.</span>
+      </div>
+      <div class="review">
+        <p>“Grazie alle telecamere posso vedere il mio cane in qualsiasi momento. È come averlo sempre con me! Consigliatissimi.”</p>
+        <div class="stars">★★★★★</div>
+        <span class="author">- Sara B.</span>
+      </div>
+      <div class="review">
+  <p>“Posto pulitissimo, personale sempre disponibile. Ho lasciato il mio cane per una settimana ed è tornato sereno e felice!”</p>
+  <div class="stars">★★★★★</div>
+  <span class="author">- Giulia S.</span>
+</div>
+
+<div class="review">
+  <p>“Struttura eccellente, grande professionalità. Il servizio webcam è una vera tranquillità per chi lascia il proprio amico a quattro zampe.”</p>
+  <div class="stars">★★★★★</div>
+  <span class="author">- Andrea T.</span>
+</div>
+
+<div class="review">
+  <p>“Il mio cane ha imparato tanto grazie all’addestramento. Consiglio a tutti i proprietari di cani, personale qualificato e amorevole.”</p>
+  <div class="stars">★★★★☆</div>
+  <span class="author">- Elisa M.</span>
+</div>
+
+<div class="review">
+  <p>“Ambiente familiare, grande spazio all’aperto e attenzione ai dettagli. Finalmente una pensione dove lascio il mio cane senza ansia!”</p>
+  <div class="stars">★★★★★</div>
+  <span class="author">- Roberto P.</span>
+</div>
+
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+<style>
+  #recensioni {
+    background: #fefcf9;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  #recensioni h2 {
+    color: #063612;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+
+  .carousel-recensioni {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .recensioni-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .review {
+    min-width: 100%;
+    background: #fff8ef;
+    border-left: 4px solid #8b5e3c;
+    padding: 20px;
+    color: #4b3621;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+
+  .review p {
+    margin: 0;
+    font-size: 1.1em;
+  }
+
+  .author {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #8b5e3c;
+    font-family: Georgia, serif;
+  }
+
+  .stars {
+    color: #ff9800;
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+
+  .carousel-recensioni button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #8b5e3c;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+
+  .carousel-recensioni button:hover {
+    opacity: 1;
+  }
+
+  .carousel-recensioni .prev {
+    left: -10px;
+  }
+
+  .carousel-recensioni .next {
+    right: -10px;
+  }
+</style>
+
+<script>
+  const wrapper = document.querySelector('.recensioni-wrapper');
+  const reviews = document.querySelectorAll('.review');
+  const prevBtn = document.querySelector('.carousel-recensioni .prev');
+  const nextBtn = document.querySelector('.carousel-recensioni .next');
+  let index = 0;
+
+  function showSlide(i) {
+    if (i < 0) index = reviews.length - 1;
+    else if (i >= reviews.length) index = 0;
+    else index = i;
+
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prevBtn.addEventListener('click', () => showSlide(index - 1));
+  nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+  // auto-scroll every 5 seconds (optional)
+  // setInterval(() => showSlide(index + 1), 5000);
+</script>
+
+
+  <footer>
+    <p>&copy; 2025 Bull Farm Dog House. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>
