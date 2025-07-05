@@ -51,7 +51,7 @@ a:hover {
 
 .logo p {
   font-family:  Georgia, serif;
-   font-style: italic;
+  font-style: italic;
   font-size: 1.3em;
   color: #491d04;
 }
@@ -83,7 +83,7 @@ a:hover {
 
 /* Hero */
 .hero {
-  background: linear-gradient(120deg, rgba(139,94,60,0.8), rgba(76,107,60,0.8)), 
+  background: linear-gradient(120deg, rgba(139,94,60,0.8), rgba(76,107,60,0.8)),
               url('images/cane1.jpg') center/cover no-repeat;
   height: 60vh;
   color: #063612;
@@ -172,4 +172,106 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
+}
+
+/* -----------------------------
+   Responsive adjustments
+----------------------------- */
+
+@media (max-width: 768px) {
+
+  .logo img {
+    height: 100px;
+  }
+
+  .logo h1 {
+    font-size: 2.2em;
+  }
+
+  .logo p {
+    font-size: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  .section h2 {
+    font-size: 1.8em;
+  }
+
+  .section p {
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .logo img {
+    height: 80px;
+  }
+
+  .logo h1 {
+    font-size: 1.8em;
+  }
+
+  .logo p {
+    font-size: 0.9em;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .section h2 {
+    font-size: 1.5em;
+  }
+
+  .section p {
+    font-size: 0.9em;
+  }
 }
