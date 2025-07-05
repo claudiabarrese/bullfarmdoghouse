@@ -41,6 +41,8 @@ a:hover {
 
 .logo img {
   height: 150px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .logo h1 {
@@ -76,6 +78,8 @@ a:hover {
   font-weight: bold;
   padding: 8px 15px;
   border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -85,8 +89,9 @@ a:hover {
 
 /* Hero */
 .hero {
-  background: linear-gradient(120deg, rgba(139,94,60,0.8), rgba(76,107,60,0.8)),
-              url('images/cane1.jpg') center/cover no-repeat;
+  background: 
+    linear-gradient(120deg, rgba(139,94,60,0.8), rgba(76,107,60,0.8)),
+    url('images/cane1.jpg') center/cover no-repeat;
   height: 60vh;
   color: #063612;
   display: flex;
@@ -95,6 +100,7 @@ a:hover {
   align-items: center;
   text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
   padding: 20px;
+  text-align: center;
 }
 
 .hero h2 {
@@ -134,12 +140,16 @@ a:hover {
   border-radius: 12px;
   margin-top: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Attestati Section (extra) */
 .attestati {
   background: linear-gradient(135deg, #8B5E3C, #4C6B3C);
   color: #FEFBF3;
+  padding: 40px 20px;
 }
 
 .attestati h2 {
@@ -153,13 +163,15 @@ a:hover {
 /* Social */
 .social {
   margin-top: 20px;
+  text-align: center;
 }
 
 .social img {
   height: 40px;
   margin: 10px 15px 0;
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social img:hover {
@@ -194,12 +206,11 @@ footer {
     font-size: 1em;
   }
 
-  /* NON modifichiamo .nav-links qui per mantenerla come su desktop */
+  /* Manteniamo .nav-links invariato per coerenza */
 
   .hero {
     height: auto;
     padding: 40px 15px;
-    text-align: center;
   }
 
   .hero h2 {
