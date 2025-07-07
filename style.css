@@ -58,6 +58,7 @@ a:hover {
   color: #491d04;
 }
 
+/* Stile base nav-links (desktop) */
 .nav-links {
   list-style: none;
   display: flex;
@@ -86,11 +87,48 @@ a:hover {
   color: #4C3A2D;
 }
 
+/* Bottone hamburger - nascosto su desktop */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #FEFBF3;
+  cursor: pointer;
+}
+
+/* MEDIA QUERY per mobile */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+  }
+
   .nav-links {
-    gap: 15px;
+    display: none;
+    flex-direction: column;
+    background-color: #4C3A2D;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links li {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 }
+
 
 /* Hero */
 .hero {
